@@ -1,4 +1,4 @@
-header{
+header {
   margin-bottom: 94px;
 }
 
@@ -160,4 +160,20 @@ nav {
   border: 1px solid transparent;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    &__menu {
+      position: fixed;
+      top: 8vh;
+      right: 0;
+      width: 50%;
+      height: 93vh;
+      background-color: #232536;
+      flex-direction: column;
+      // transform: translateX(100%);
+      transition: 0.5s all;
+    }
+  }
 }

@@ -4,6 +4,9 @@
     box-sizing: border-box;
     list-style: none;
 }
+
+@import './fonts';
+@import './mixins';
 @import './container';
 @import "./header";
 @import "./blogs";

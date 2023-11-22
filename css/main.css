@@ -156,6 +156,18 @@ nav {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .navbar__menu {
+    position: fixed;
+    top: 8vh;
+    right: 0;
+    width: 50%;
+    height: 93vh;
+    background-color: #232536;
+    flex-direction: column;
+    transition: 0.5s all;
+  }
+}
 .blogs {
   border-bottom: 1px solid #d3d4d6;
   padding-bottom: 66px;
