@@ -366,6 +366,53 @@ footer {
        column-gap: 26.67px;
 }
 
+header {
+  height: 418px;
+  width: 100%;
+  background: var(--Lavender, #f4f0f8);
+}
+
 .business-hero {
   margin-top: 80px;
+  height: 418px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.business-hero h1 {
+  color: var(--Black, #232536);
+  text-align: center;
+  /* Display */
+  font-family: Sen;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 114.286% */
+  letter-spacing: -2px;
+}
+.business-hero h3 {
+  color: var(--Medium-grey, #6d6e76);
+  text-align: center;
+  /* Body 1 */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+  max-width: 515px;
+  margin-bottom: 32px;
+  margin-top: 16px;
+}
+.business-hero h2 {
+  color: var(--Black, #232536);
+  text-align: center;
+  /* Cap 03 */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }/*# sourceMappingURL=main.css.map */
