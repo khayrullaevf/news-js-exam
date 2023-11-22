@@ -206,13 +206,16 @@ nav {
       align-items: center;
       justify-content: space-around;
       gap: 3rem;
+      button{
+        display: none;;
+      }
     }
   }
-      .nav__toggler{
-        display: block;
-}
+//       .nav__toggler{
+//         display: block;
+// }
 
-.active__menu{
-  transform: translateX(0);
-}
+// .active__menu{
+//   transform: translateX(0);
+// }
 }

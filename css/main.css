@@ -201,11 +201,8 @@ nav {
     justify-content: space-around;
     gap: 3rem;
   }
-  .nav__toggler {
-    display: block;
-  }
-  .active__menu {
-    transform: translateX(0);
+  .navbar__menu button {
+    display: none;
   }
 }
 .blogs {
@@ -333,7 +330,6 @@ footer {
   width: 100%;
   height: 164px;
   background: var(--Black, #232536);
-  width: 1440px;
 }
 
 .footer {
@@ -368,4 +364,8 @@ footer {
   display: flex;
   -moz-column-gap: 26.67px;
        column-gap: 26.67px;
+}
+
+.business-hero {
+  margin-top: 80px;
 }/*# sourceMappingURL=main.css.map */
