@@ -9,6 +9,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
 }
 
 .navbar {
@@ -51,7 +52,6 @@ nav {
   height: 720px;
   background-image: url("../img/hero-bg.png");
   width: 100%;
-  width: 1440px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -161,6 +161,34 @@ nav {
   border-radius: 5px;
   cursor: pointer;
 }
+.nav__toggler {
+  div {
+    width: 2.5rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: darkgray;
+    transition: 0.4s ease-in;
+  }
+}
+.nav__toggler {
+  cursor: pointer;
+  // display: none;
+  margin-right: 20px;
+}
+
+.nav__active {
+  transform: translateX(0);
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 10px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -10px);
+}
 
 @media (max-width: 768px) {
   .navbar {
@@ -172,8 +200,19 @@ nav {
       height: 93vh;
       background-color: #232536;
       flex-direction: column;
-      // transform: translateX(100%);
+      transform: translateX(100%);
       transition: 0.5s all;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 3rem;
     }
   }
+      .nav__toggler{
+        display: block;
+}
+
+.active__menu{
+  transform: translateX(0);
+}
 }
