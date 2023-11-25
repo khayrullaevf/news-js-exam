@@ -1,5 +1,5 @@
 .category {
-  padding-bottom: 73px;
+  margin-bottom: 237px;
 
   &__title {
     color: var(--Black, #232536);
@@ -15,6 +15,9 @@
   &__cards {
     display: flex;
     column-gap: 32px;
+    row-gap: 32px;
+    flex-wrap:wrap ;
+    justify-content: space-around;
     &-card {
       width: 296px;
       height: 221.072px;
@@ -55,4 +58,14 @@
   }
   }
  
+}
+
+
+@media (max-width:654px) {
+  .category{
+      &__cards{
+        justify-content: center;
+      }
+  }
+  
 }

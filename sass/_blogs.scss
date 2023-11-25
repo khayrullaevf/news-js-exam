@@ -16,10 +16,18 @@
 
   &__cards {
     display: flex;
-    column-gap: 32px;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 32px;
     &-card {
-      width: 405px;
-       
+      max-width: 405px;
+      flex-grow: 12;
+
+       img{
+        min-width: 405px;
+       }
       h3 {
         color: var(--Dark-Grey, #4c4c4c);
 
@@ -69,4 +77,20 @@
       }
     }
   }
+}
+
+
+@media(max-width:839px){
+
+.blogs{
+   &__cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 32px;
+   }
+}
+  
 }
