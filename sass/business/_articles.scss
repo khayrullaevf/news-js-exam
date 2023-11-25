@@ -1,0 +1,114 @@
+.articles {
+  display: flex;
+  flex-direction: column;
+  margin-top: 57px;
+  justify-content: center;
+  align-items: center;
+}
+.article {
+  display: flex;
+  margin-bottom: 32px;
+}
+.article__content {
+  margin-left: 48.72px;
+}
+.article__content-subtitle {
+  color: var(--Purple, #592ea9);
+
+  /* Cap 1 */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.article__content-title {
+  color: var(--Black, #232536);
+
+  /* Heading H2 */
+  font-family: Sen;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 133.333% */
+  letter-spacing: -2px;
+  margin-bottom: 64px;
+}
+.article__content-text {
+  color: var(--Medium-grey, #6d6e76);
+
+  /* Body 1 */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+  max-width: 779.581px;
+}
+
+.pagination {
+  display: flex;
+  margin-top: 87px;
+  margin-bottom: 251px; 
+  align-items: center;
+}
+.pagination li:nth-child(1) {
+  color: var(--Medium-grey, #6d6e76);
+  text-align: center;
+
+  /* Heading H4 */
+  font-family: Sen;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+  margin-right: 11px;
+  cursor: pointer;
+}
+.pagination li:nth-child(1):hover {
+  color: var(--Black, #232536);
+  text-align: center;
+
+  /* Heading H3 */
+  font-family: Sen;
+ font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 142.857% */
+  letter-spacing: -1px;
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+.pagination li {
+  color: var(--Black, #232536);
+  text-align: center;
+
+  /* Heading H3 */
+  font-family: Sen;
+ font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 142.857% */
+  letter-spacing: -1px;
+  margin-left: 7px;
+  cursor: pointer;
+}
+.pagination li:hover{
+    color: var(--Medium-grey, #6d6e76);
+  text-align: center;
+
+  /* Heading H4 */
+  font-family: Sen;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+  cursor: pointer; 
+}
+
+.pagination li:last-child {
+  margin-left: 20px;
+}

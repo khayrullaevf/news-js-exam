@@ -5,6 +5,7 @@
     list-style: none;
 }
 
+
 @import './fonts';
 @import './mixins';
 @import './container';
@@ -13,3 +14,7 @@
 @import "./category";
 @import "./footer";
 @import "./business/header";
+@import "./business/articles";
+@import "./all-posts/header";
+@import "./all-posts/article";
+@import "./register/header";

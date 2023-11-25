@@ -1,14 +1,17 @@
 
 
-const toggleBtn = document.querySelector(".nav__toggler");
-const toggleIcon=document.querySelector('.nav__toggler')
 
-const navbarMenu=document.querySelector('.navbar__menu')
-
-
+const toggleBtn = document.querySelector(".toggle-btn");
+const toggleBtnIcon = document.querySelector(".toggle-btn i");
+const dropdownMenu = document.querySelector(".dropdown__menu");
 
 toggleBtn.addEventListener('click',()=>{
-    navbarMenu.classList.add('active__menu');
-    toggleIcon.classList.add('toggle')
+    dropdownMenu.classList.toggle('open')
+    const isOpen=dropdownMenu.classList.contains('open')
+
+   
+    toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+ 
     
-})
+
+}) 

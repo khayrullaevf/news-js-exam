@@ -3,35 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="./css/main.css" />
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- Header -->
     <header>
-      <nav>
+     <nav>
         <div class="container">
           <div class="navbar">
             <a href="./index.html">
               <img src="./img/Logo.svg" alt="Navbar-logo" />
             </a>
-            <ul class="navbar__menu">
-              <li class="navbar__menu-link"><a href="./index.html">Home</a></li>
-              <li class="navbar__menu-link"><a href="./business.html" >Blog</a></li>
-              <li class="navbar__menu-link"><a href="#">About us</a></li>
-              <li class="navbar__menu-link"><a href="#">Register</a></li>
+            <div class="navbar__left">
+              <ul class="navbar__menu">
+                <li class="navbar__menu-link">
+                  <a href="./index.html">Home</a>
+                </li>
+                <li class="navbar__menu-link">
+                  <a href="./business.html">Blog</a>
+                </li>
+                <li class="navbar__menu-link">
+                  <a href="./allposts.html">About us</a>
+                </li>
+                <li class="navbar__menu-link">
+                  <a href="./register.html">Register</a>
+                </li>
+              </ul>
               <button class="login">Login</button>
-            </ul>
-            <!-- <div class="nav__toggler">
-              <div className="line1"></div>
-              <div className="line2"></div>
-              <div className="line3"></div>
-            </div> -->
+            </div>
+
+            <div class="toggle-btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
           </div>
         </div>
       </nav>
+      <div class="dropdown__menu ">
+        <li><a href="./index.html">Home</a></li>
+        <li>
+          <a href="./business.html">Blog</a>
+        </li>
+        <li>
+          <a href="./allposts.html">About us</a>
+        </li>
+        <li>
+          <a href="./register.html">Register</a>
+        </li>
+        <li><button class="login">Login</button></li>
+      </div>
 
-      <div class="hero">
+       <div class="hero">
         <div class="container">
           <div class="hero__content">
             <h2 class="hero__content-subtitle">
@@ -52,12 +81,12 @@
             <button class="btn read-more">Read More ></button>
           </div>
         </div>
-      </div>
+      </div> 
     </header>
 
     <!-- Header -->
     <!-- Blogs -->
-    <section>
+    <!-- <section>
 
      <div class="container">
            <div class="blogs">
@@ -91,10 +120,10 @@
 
         </div>
      </div>
-     </section>
+     </section> -->
     <!-- Blogs -->
     <!-- Category -->
-
+<!-- 
     <section>
 
         <div class="container">
@@ -133,7 +162,7 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
     <!-- Category -->
     <!-- Footer  -->
     <footer>
