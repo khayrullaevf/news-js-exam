@@ -448,6 +448,21 @@ footer {
        column-gap: 26.67px;
 }
 
+@media (max-width: 576px) {
+  footer, .footer {
+    height: 90px;
+  }
+  footer__info h2 a, .footer__info h2 a {
+    font-size: 14px;
+  }
+  footer__info h3 a, .footer__info h3 a {
+    font-size: 13px;
+  }
+  .footer__socails {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+}
 .header-business {
   height: 418px;
   width: 100%;

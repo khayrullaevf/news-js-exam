@@ -47,3 +47,30 @@ footer {
     column-gap: 26.67px;
   }
 }
+
+
+
+@media (max-width:576px){
+  footer, .footer{
+    height: 90px;
+
+    &__info{
+      h2{
+        a{
+         font-size: 14px;
+        }
+      }
+      h3{
+        a{
+          font-size: 13px;
+        }
+      }
+    }
+
+   
+
+  }
+.footer__socails{
+  column-gap: 10px;
+}
+}
