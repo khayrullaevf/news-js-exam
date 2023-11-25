@@ -700,6 +700,9 @@ footer {
   }
 }
 @media (max-width: 768px) {
+  .articles {
+    row-gap: 40px;
+  }
   .article {
     display: flex;
     flex-direction: column;
