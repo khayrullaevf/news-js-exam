@@ -746,7 +746,7 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-top: 149px;
-  margin-bottom: 322px;
+  margin-bottom: 80px;
 }
 .register__title {
   color: #232536;
@@ -807,4 +807,47 @@ footer {
   font-style: normal;
   font-weight: 700;
   line-height: 32px; /* 133.333% */
+}
+.register__form .register-btn:hover {
+  scale: 1.05;
+  background-color: #ffd050;
+  color: #fff;
+  border: 1px solid transparent;
+}
+.register__form .register-btn:active {
+  scale: 0.95;
+  background-color: #ffd050;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.error {
+  color: #fff;
+}
+
+.show-error {
+  color: rgb(206, 9, 9);
+  font-size: 14px;
+  height: 13px;
+}
+
+.post-data {
+  margin-bottom: 250px;
+  padding-bottom: 230px;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 30px;
+}
+.users .user {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  max-width: 600px;
 }/*# sourceMappingURL=main.css.map */

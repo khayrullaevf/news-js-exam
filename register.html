@@ -46,7 +46,7 @@
           </div>
         </div>
       </nav>
-      <div class="dropdown__menu ">
+      <div class="dropdown__menu">
         <li><a href="./index.html">Home</a></li>
         <li>
           <a href="./business.html">Business</a>
@@ -69,15 +69,40 @@
           <h1 class="register__title">Register</h1>
 
           <form class="register__form">
-            <input type="text" class="firstname" placeholder="Firstname" />
-            <input type="text" class="lastname" placeholder="Lastname" />
-            <input type="text" class="username" placeholder="Username" />
-            <input type="password" class="password" placeholder="Password" />
-            <input
-              type="password"
-              class="confirm__password"
-              placeholder="Confirm password"
-            />
+            <div class="input__control">
+              <input
+              required
+                type="text"
+                class="firstname register__firstname"
+                placeholder="Firstname"
+              />
+              <span class="error"></span>
+            </div>
+            <div class="input__control">
+              
+              <input type="text" class="lastname" placeholder="Lastname"  required/>
+              <span class=".lastname-error"></span>
+            </div>
+            <div class="input__control">
+              <input type="text" class="username" placeholder="Username" required />
+              <span class="error"></span>
+            </div>
+            <div class="input__control">
+              <input type="password" class="password" placeholder="Password" required />
+
+              <span class="error"></span>
+            </div>
+            <div class="input__control">
+              <input
+                type="password"
+                class="confirm__password"
+                placeholder="Confirm password"
+                required
+              />
+
+              <span class="error"></span>
+            </div>
+
             <button type="submit" class="register-btn">Register</button>
           </form>
         </div>
@@ -85,6 +110,35 @@
     </section>
     <!-- Register -->
     <!-- Footer -->
+    <!-- POST -->
+    <section>
+      <div class="post-data">
+        <div class="container">
+          <div class="users">
+          <!-- <div class="user">
+            <h2 class="user__firstname">Fazliddin</h2>
+            <h3 class="user__lastname">Khayrullaev</h3>
+            <h4 class="user__username">Khayrullaev21</h4>
+            <button class="delete-btn">Delete</button>
+          </div>
+          <div class="user">
+            <h2 class="user__firstname">Fazliddin</h2>
+            <h3 class="user__lastname">Khayrullaev</h3>
+            <h4 class="user__username">Khayrullaev21</h4>
+            <button class="delete-btn">Delete</button>
+          </div>
+          <div class="user">
+            <h2 class="user__firstname">Fazliddin</h2>
+            <h3 class="user__lastname">Khayrullaev</h3>
+            <h4 class="user__username">Khayrullaev21</h4>
+            <button class="delete-btn">Delete</button>
+          </div> -->
+        </div>
+        
+        </div>
+      </div>
+    </section>
+    <!-- POST -->
     <footer>
       <div class="container">
         <div class="footer">

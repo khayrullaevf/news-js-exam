@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 149px;
-  margin-bottom: 322px;
+  margin-bottom: 80px;
   &__title {
     color: #232536;
     text-align: center;
@@ -57,5 +57,65 @@
       font-weight: 700;
       line-height: 32px; /* 133.333% */
     }
+    .register-btn:hover {
+      scale: 1.05;
+      background-color: #ffd050;
+      color: #fff;
+      border: 1px solid transparent;
+    }
+    .register-btn:active {
+      scale: 0.95;
+      background-color: #ffd050;
+      color: #fff;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+// .input-control input:focus{
+//   outline: 0;
+// }
+
+// .input-control .success input:focus{
+//   border-color: #16a844;
+// }
+// .input-control .error-message input:focus{
+//   border-color: rgb(206, 9, 9);
+// }
+// .input-control .error-message{
+//   color: rgb(206, 9, 9);
+//   font-size: 14px;
+//   height: 13px;
+// }
+
+.error {
+  color: #fff;
+}
+
+.show-error{
+  color: rgb(206, 9, 9);
+  font-size: 14px;
+  height: 13px;
+}
+
+
+.post-data{
+  margin-bottom: 250px;
+    padding-bottom: 230px
+}
+
+
+.users{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 30px;
+  .user{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+     max-width: 600px;
   }
 }
