@@ -8,7 +8,7 @@ const businessArticlesWrapper = document.querySelector(
 );
 const searchInput = document.querySelector(".search-input ", ".business-input");
 const newsAPI =
-  "https://newsapi.org/v2/everything?q=tesla&from=2023-10-26&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182";
+  "https://newsapi.org/v2/everything?q=tesla&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182";
 
 //Navbar responsive
 toggleBtn.addEventListener("click", () => {
@@ -33,7 +33,7 @@ async function getNews(url) {
 searchInput?.addEventListener("input", async () => {
   const searchValue = searchInput.value.trim().toLowerCase();
   const searchedData = await getNews(
-    `https://newsapi.org/v2/everything?q=${searchValue}&from=2023-10-26&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182`
+    `https://newsapi.org/v2/everything?q=${searchValue}&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182`
   );
   console.log(searchedData);
   renderNews(searchedData.articles);
@@ -81,7 +81,7 @@ function renderNews(newsData) {
 }
 
 getNews(
-  "https://newsapi.org/v2/everything?q=tesla&from=2023-10-26&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182"
+  "https://newsapi.org/v2/everything?q=tesla&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182"
 ).then((data) => renderNews(data.articles));
 
 const formRegister = document.querySelector(".register__form");
@@ -102,7 +102,6 @@ formRegister.addEventListener("submit", (e) => {
 
 
 async function createPost() {
-  
   const firstnameValue=firstname.value.trim()
   const lastnameValue = lastname.value.trim();
   const usernameValue = username.value.trim();
@@ -122,7 +121,7 @@ async function createPost() {
      headers: {
        "Content-type": "application/json ;   charset=UTF-8",
      },
-     body:JSON.stringify({user})
+     body:JSON.stringify(user)
    });
 
 if(response.ok){

@@ -8,7 +8,7 @@ const businessArticlesWrapper = document.querySelector(
 );
 const searchInput = document.querySelector(".search-input ", ".business-input");
 const newsAPI =
-  "https://newsapi.org/v2/everything?q=all&from=2023-10-26&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182";
+  "https://newsapi.org/v2/everything?q=all&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182";
 
 //Navbar responsive
 toggleBtn.addEventListener("click", () => {
@@ -33,7 +33,7 @@ async function getNews(url) {
 searchInput.addEventListener("input", async () => {
   const searchValue = searchInput.value.trim().toLowerCase();
   const searchedData = await getNews(
-    `https://newsapi.org/v2/everything?q=${searchValue}&from=2023-10-26&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182`
+    `https://newsapi.org/v2/everything?q=${searchValue}&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182`
   );
   console.log(searchedData);
   renderNews(searchedData.articles);
@@ -63,7 +63,7 @@ function renderNews(newsData) {
       articleContentBox.classList.add("article__content");
       const articleSubtitle = document.createElement("h3");
       articleSubtitle.classList.add("article__content-subtitle");
-      articleSubtitle.textContent = "Business";
+      articleSubtitle.textContent = news.source.name;
       const articleTitle = document.createElement("h2");
       articleTitle.classList.add("article__content-title");
       articleTitle.textContent = news.title;
@@ -82,5 +82,5 @@ function renderNews(newsData) {
 }
 
 getNews(
-  "https://newsapi.org/v2/everything?q=all&from=2023-10-26&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182"
+  "https://newsapi.org/v2/everything?q=all&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182"
 ).then((data) => renderNews(data.articles));
