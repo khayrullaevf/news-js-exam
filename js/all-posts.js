@@ -29,7 +29,7 @@ async function getNews(url) {
   }
 }
 
-//Search input
+// //Search input
 searchInput.addEventListener("input", async () => {
   const searchValue = searchInput.value.trim().toLowerCase();
   const searchedData = await getNews(
@@ -40,7 +40,7 @@ searchInput.addEventListener("input", async () => {
   console.log(searchValue);
 });
 
-//Render data
+// //Render data
 function renderNews(newsData) {
   businessArticlesWrapper.innerHTML = "";
 

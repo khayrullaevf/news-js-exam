@@ -850,4 +850,20 @@ footer {
   -moz-column-gap: 40px;
        column-gap: 40px;
   max-width: 600px;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #434040;
+  border-radius: 10px;
+}
+.users .user h2, .users .user h3, .users .user h4 {
+  color: #232536;
+  font-size: 17px;
+}
+
+.delete-btn {
+  padding: 8px;
+  color: #fff;
+  background: red;
+  border-radius: 7px;
+  border: 1px solid transparent;
 }/*# sourceMappingURL=main.css.map */
