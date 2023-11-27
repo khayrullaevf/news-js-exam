@@ -71,36 +71,35 @@
           <form class="register__form">
             <div class="input__control">
               <input
-              required
                 type="text"
                 class="firstname register__firstname"
                 placeholder="Firstname"
               />
-              <span class="error"></span>
+              <span class="error firstname-error"></span>
             </div>
             <div class="input__control">
               
-              <input type="text" class="lastname" placeholder="Lastname"  required/>
-              <span class=".lastname-error"></span>
+              <input type="text" class="lastname" placeholder="Lastname"/>
+              <span class="error lastname-error"></span>
             </div>
             <div class="input__control">
-              <input type="text" class="username" placeholder="Username" required />
-              <span class="error"></span>
+              <input type="text" class="username" placeholder="Username"  />
+              <span class="error username-error"></span>
             </div>
             <div class="input__control">
-              <input type="password" class="password" placeholder="Password" required />
+              <input type="password" class="password" placeholder="Password"/>
 
-              <span class="error"></span>
+              <span class="error password-error"></span>
             </div>
             <div class="input__control">
               <input
                 type="password"
-                class="confirm__password"
+                class="confirm__password "
                 placeholder="Confirm password"
-                required
+              
               />
 
-              <span class="error"></span>
+              <span class="error password__confirm-error"></span>
             </div>
 
             <button type="submit" class="register-btn">Register</button>

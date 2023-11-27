@@ -821,16 +821,6 @@ footer {
   border: 1px solid transparent;
 }
 
-.error {
-  color: #fff;
-}
-
-.show-error {
-  color: rgb(206, 9, 9);
-  font-size: 14px;
-  height: 13px;
-}
-
 .post-data {
   margin-bottom: 250px;
   padding-bottom: 230px;
@@ -866,4 +856,10 @@ footer {
   background: red;
   border-radius: 7px;
   border: 1px solid transparent;
+}
+
+.input__control span {
+  color: rgb(206, 9, 9);
+  font-size: 14px;
+  height: 13px;
 }/*# sourceMappingURL=main.css.map */

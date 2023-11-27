@@ -19,71 +19,70 @@ toggleBtn.addEventListener("click", () => {
 });
 
 //Get data
-async function getNews(url) {
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
-}
+// async function getNews(url) {
+//   try {
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-//Search input
-searchInput?.addEventListener("input", async () => {
-  const searchValue = searchInput.value.trim().toLowerCase();
-  const searchedData = await getNews(
-    `https://newsapi.org/v2/everything?q=${searchValue}&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182`
-  );
-  console.log(searchedData);
-  renderNews(searchedData.articles);
-  console.log(searchValue);
-});
+// //Search input
+// searchInput?.addEventListener("input", async () => {
+//   const searchValue = searchInput.value.trim().toLowerCase();
+//   const searchedData = await getNews(
+//     `https://newsapi.org/v2/everything?q=${searchValue}&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182`
+//   );
+//   console.log(searchedData);
+//   renderNews(searchedData.articles);
+//   console.log(searchValue);
+// });
 
-//Render data
-function renderNews(newsData) {
-  businessArticlesWrapper.innerHTML = "";
-  newsData.slice(0, 4).forEach((news) => {
-    if (news.name != "[Removed]" || news.content !== "[Removed]") {
-      //  console.log(news?.description);
+// //Render data
+// function renderNews(newsData) {
+//   // businessArticlesWrapper.innerHTML = "";
+//   newsData.slice(0, 4).forEach((news) => {
+//     if (news.name != "[Removed]" || news.content !== "[Removed]") {
+//       //  console.log(news?.description);
 
-      const articleCard = document.createElement("div");
-      articleCard.classList.add("article");
+//       const articleCard = document.createElement("div");
+//       articleCard.classList.add("article");
 
-      const artcileIMg = document.createElement("img");
-      artcileIMg.alt = news.title;
-      if (news.urlToImage && news.urlToImage !== null) {
-        artcileIMg.src = news.urlToImage;
-      } else {
-        artcileIMg.src = "./img/missing-image.jpg";
-      }
+//       const artcileIMg = document.createElement("img");
+//       artcileIMg.alt = news.title;
+//       if (news.urlToImage && news.urlToImage !== null) {
+//         artcileIMg.src = news.urlToImage;
+//       } else {
+//         artcileIMg.src = "./img/missing-image.jpg";
+//       }
 
-      const articleContentBox = document.createElement("div");
-      articleContentBox.classList.add("article__content");
-      const articleSubtitle = document.createElement("h3");
-      articleSubtitle.classList.add("article__content-subtitle");
-      articleSubtitle.textContent = "Business";
-      const articleTitle = document.createElement("h2");
-      articleTitle.classList.add("article__content-title");
-      articleTitle.textContent = news.title;
-      const articleText = document.createElement("p");
-      articleText.classList.add("article__content-text");
-      articleText.textContent = news?.description;
+//       const articleContentBox = document.createElement("div");
+//       articleContentBox.classList.add("article__content");
+//       const articleSubtitle = document.createElement("h3");
+//       articleSubtitle.classList.add("article__content-subtitle");
+//       articleSubtitle.textContent = "Business";
+//       const articleTitle = document.createElement("h2");
+//       articleTitle.classList.add("article__content-title");
+//       articleTitle.textContent = news.title;
+//       const articleText = document.createElement("p");
+//       articleText.classList.add("article__content-text");
+//       articleText.textContent = news?.description;
 
-      articleContentBox.appendChild(articleSubtitle);
-      articleContentBox.appendChild(articleTitle);
-      articleContentBox.appendChild(articleText);
-      articleCard.appendChild(artcileIMg);
-      articleCard.appendChild(articleContentBox);
-      businessArticlesWrapper.appendChild(articleCard);
-    }
-  });
-}
+//       articleContentBox.appendChild(articleSubtitle);
+//       articleContentBox.appendChild(articleTitle);
+//       articleContentBox.appendChild(articleText);
+//       articleCard.appendChild(artcileIMg);
+//       articleCard.appendChild(articleContentBox);
+//       businessArticlesWrapper.appendChild(articleCard);
+//     }
+//   });
+// }
 
-getNews(
-  "https://newsapi.org/v2/everything?q=tesla&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182"
-).then((data) => renderNews(data.articles));
-
+// getNews(
+//   "https://newsapi.org/v2/everything?q=tesla&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182"
+// ).then((data) => renderNews(data.articles));
 
 //POST , DELETE
 const formRegister = document.querySelector(".register__form");
@@ -98,6 +97,7 @@ const error = document.querySelector(".error");
 
 formRegister.addEventListener("submit", (e) => {
   e.preventDefault();
+  validateForm();
   createPost();
 
   formRegister.reset();
@@ -159,7 +159,7 @@ async function createPost() {
     btnDelete.addEventListener("click", () => {
       console.log(newPost.id);
       console.log(userBox);
-      deletePost(newPost.id,userBox)
+      deletePost(newPost.id, userBox);
     });
   }
 }
@@ -178,5 +178,47 @@ async function deletePost(id, postElement) {
     }
   } catch (error) {
     console.log(error);
+  }
+}
+
+function validateForm() {
+  const firstname = document.querySelector(".firstname").value.trim();
+  const lastname = document.querySelector(".lastname").value.trim();
+  const username = document.querySelector(".username").value.trim();
+  const password = document.querySelector(".password").value.trim();
+  const passwordConfirm = document.querySelector(".confirm__password")
+    .value.trim();
+  const firstNameError = document.querySelector(".firstname-error");
+  const lastNameError = document.querySelector(".lastname-error");
+  const userNameError = document.querySelector(".username-error");
+  const passwordError = document.querySelector(".password-error");
+  const passwordConfirmError = document.querySelector(
+    ".password__confirm-error"
+  );
+
+  if (
+    firstname === "" &&
+    lastname === "" &&
+    username === "" &&
+    password === "" &&
+    passwordConfirm === ""
+  ) {
+    console.log("Enter your name");
+    console.log("Enter your lastname");
+    firstNameError.textContent = "Please, enter your name!";
+    lastNameError.textContent = "Please,enter your lastname!";
+    userNameError.textContent = "Please, enter your username!";
+    passwordError.textContent = "Please , enter your password!";
+    passwordConfirmError.textContent = "Please , confirm your password!";
+  } else if (firstname === "") {
+    firstNameError.textContent = "Please, enter your name!";
+  } else if (lastname === "") {
+    lastNameError.textContent = "Please,enter your lastname!";
+  } else if (username === "") {
+    userNameError.textContent = "Please, enter your username!";
+  } else if (password === "") {
+     passwordError.textContent = "Please , enter your password!";
+  } else if (passwordConfirm === "") {
+    passwordConfirmError.textContent = "Please , confirm your password!";
   }
 }
