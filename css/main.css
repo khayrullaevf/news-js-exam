@@ -5,6 +5,14 @@
   list-style: none;
 }
 
+@font-face {
+  font-family: Inter;
+  src: url("../fonts/Inter/static/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: Sen;
+  src: url("../fonts/Sen/static/Sen-Regular.ttf");
+}
 .container {
   max-width: 1310px;
   width: 100%;
