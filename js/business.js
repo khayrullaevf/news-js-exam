@@ -8,7 +8,12 @@ const businessArticlesWrapper = document.querySelector(
 );
 const searchInput = document.querySelector(".search-input ", ".business-input");
 const newsAPI =
-  "https://newsapi.org/v2/everything?q=all&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182";
+  "https://newsapi.org/v2/everything?q=tesla&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182";
+
+
+  
+
+
 
 //Navbar responsive
 toggleBtn.addEventListener("click", () => {
@@ -17,7 +22,6 @@ toggleBtn.addEventListener("click", () => {
 
   toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
 });
-
 //Get data
 async function getNews(url) {
   try {
@@ -28,9 +32,8 @@ async function getNews(url) {
     console.log(error);
   }
 }
-
 //Search input
-searchInput.addEventListener("input", async () => {
+searchInput?.addEventListener("input", async () => {
   const searchValue = searchInput.value.trim().toLowerCase();
   const searchedData = await getNews(
     `https://newsapi.org/v2/everything?q=${searchValue}&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182`
@@ -40,10 +43,9 @@ searchInput.addEventListener("input", async () => {
   console.log(searchValue);
 });
 
-//Render data
+// //Render data
 function renderNews(newsData) {
   businessArticlesWrapper.innerHTML = "";
-
   newsData.slice(0, 4).forEach((news) => {
     if (news.name != "[Removed]" || news.content !== "[Removed]") {
       //  console.log(news?.description);
@@ -63,7 +65,7 @@ function renderNews(newsData) {
       articleContentBox.classList.add("article__content");
       const articleSubtitle = document.createElement("h3");
       articleSubtitle.classList.add("article__content-subtitle");
-      articleSubtitle.textContent = news.source.name;
+      articleSubtitle.textContent = "Business";
       const articleTitle = document.createElement("h2");
       articleTitle.classList.add("article__content-title");
       articleTitle.textContent = news.title;
@@ -80,8 +82,6 @@ function renderNews(newsData) {
     }
   });
 }
-
 getNews(
-  "https://newsapi.org/v2/everything?q=all&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182"
+  "https://newsapi.org/v2/everything?q=tesla&from=2023-10-27&sortBy=publishedAt&apiKey=934cb19591e64940909373a050f8d182"
 ).then((data) => renderNews(data.articles));
-

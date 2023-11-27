@@ -92,9 +92,6 @@ const username = document.querySelector(".username");
 const password = document.querySelector(".password");
 const passwordConfirm = document.querySelector(".confirm__password");
 const usersWrapper = document.querySelector(".users");
-
-const error = document.querySelector(".error");
-
 formRegister.addEventListener("submit", (e) => {
   e.preventDefault();
   validateForm();
@@ -132,7 +129,6 @@ async function createPost() {
 
   if (response.ok) {
     const newPost = await response.json();
-
     const userBox = document.createElement("div");
     userBox.classList.add("user");
     const firstname = document.createElement("h2");

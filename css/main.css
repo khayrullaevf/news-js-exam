@@ -609,9 +609,12 @@ footer {
   margin-top: 87px;
   margin-bottom: 251px;
   align-items: center;
+  padding-bottom: 300px;
+  width: 100%;
+  justify-content: center;
 }
 
-.pagination li:nth-child(1) {
+.pagination li {
   color: var(--Medium-grey, #6d6e76);
   text-align: center;
   /* Heading H4 */
@@ -619,9 +622,16 @@ footer {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 32px; /* 133.333% */
+  line-height: 32px;
   margin-right: 11px;
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #232536;
 }
 
 .pagination li:nth-child(1):hover {
